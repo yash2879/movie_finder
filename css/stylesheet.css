@@ -1,0 +1,143 @@
+body{
+	margin: 0px;
+	padding:0px;
+	overflow-x: hidden;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.header_layout{
+	background-color: #1F1D36;
+	height: 140px;
+	width: 100%;
+}
+
+.full_search_box{
+	border: 4px solid #3F3351;
+	height: 40px;
+	width: 100%;
+}
+
+.website_data_card{
+	flex: 1;
+	margin-top: 80px;
+	width: 80%;
+	box-shadow: 0px 5px 10px 3px #1F1D36;
+	background-color: #3F3351;
+	border-radius: 10px;
+}
+
+.website_data_card p{
+	padding: 50px;
+	color: #DEDDFF;
+	font-size: 40px;
+	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;	
+
+}
+
+.card_list{
+	margin-top: 80px;
+}
+
+.movie_data_card{
+	margin-top: 80px;
+	box-shadow: 0px 5px 10px 3px #1F1D36;
+	background-color: #3F3351;
+	border-radius: 10px;
+}
+
+.poster{
+	padding: 60px 20px 10px;
+}
+
+.poster img{
+	border:4px solid #1F1D36;
+}
+
+.movie_info{
+	padding:20px;
+}
+.movie_info p{
+	color:#DEDDFF;
+}
+
+.input_search_button:hover{
+	background-color: #1F1D36;
+}
+
+.footer{
+	margin-top: 80px;
+	padding: 20px;
+	background-color: #1F1D36;
+	height: 20px;
+	width: 100%;
+	color: #DEDDFF;
+}
+
+@media screen and (min-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
+    .input_search_text{
+		border: none;
+		margin: none;
+		padding: none;
+		outline: none;
+		height:38px;
+		width: 79%;
+		float: left;
+		font-size: 18px;
+		font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	}
+
+	.input_search_button{
+		border: none;
+		margin: none;
+		padding: none;
+		outline: none;
+		background-color: #3F3351;
+		color: #DEDDFF;
+		transition-duration: 0.8s;
+		height: 40px;
+		width:20.4%;
+		float: right;
+		font-size: 18px;
+		font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	}
+}
+
+@media screen and (max-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of less than 800px*/
+    .input_search_text{
+		border: none;
+		margin: none;
+		padding: none;
+		outline: none;
+		height:38px;
+		width: 79%;
+		float: left;
+		font-size: 18px;
+		font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	}
+
+	.input_search_button{
+		border: none;
+		margin: none;
+		padding: none;
+		outline: none;
+		background-color: #3F3351;
+		color: #DEDDFF;
+		transition-duration: 0.8s;
+		height: 40px;
+		width:20%;
+		float: right;
+		font-size: 18px;
+		font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	}
+}
+
+#college_header_text{
+	align-content: center;
+	display: inline-block;
+	font-size: 40px;
+	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	color: #DEDDFF;
+}
