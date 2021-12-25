@@ -6,6 +6,7 @@ var textBox = document.getElementById("text_view");
 var card_list_box = document.getElementsByClassName("card_list")[0];
 
 var countCard = 0;
+var pageNumber = 0;
 
 function searchMovies(){
 	countCard = 0;
@@ -20,7 +21,17 @@ function searchMovies(){
 async function getMovies(url) {
 	const response = await fetch(url);
 	const respData = await response.json();
-	showMovies(respData.Search);
+	var pages = Math.floor(respData.totalResults/10);
+	//alert(pages);
+	if(pages>=1) {
+		for(let i = 1; i<=pages;i++){
+			page_getMovies(url+"&page="+i); 
+			//alert(API_URL+query); 
+		}
+	}
+	else{
+		page_getMovies(url);  	
+	}
 }
 
 function showMovies(movies) {
@@ -54,5 +65,23 @@ function displayMovies(iMovie) {
 		document.getElementsByClassName("movie_info")[countCard].appendChild(ratingP);
 	});
 	countCard+=1;
+	if(countCard%10==0)
+	{	
+		pageNumber++;
+
+		const afterTM = document.createElement("p");
+		afterTM.classList.add("page_number");
+		afterTM.innerHTML = `__________________Page ${pageNumber}__________________`;
+		card_list_box.appendChild(afterTM);
+	}
 	textBox.innerHTML=`<p>${countCard} movies found. Scroll down to see info.</p>`;
+}
+
+
+//for extra pages section
+
+async function page_getMovies(url) {
+	const response = await fetch(url);
+	const respData = await response.json();
+	showMovies(respData.Search);
 }

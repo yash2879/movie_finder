@@ -43,9 +43,19 @@ body{
 
 .movie_data_card{
 	margin-top: 80px;
+	max-width:60vw;
+    word-wrap:break-word;
 	box-shadow: 0px 5px 10px 3px #1F1D36;
 	background-color: #3F3351;
+	transition-duration: 0.8s;
 	border-radius: 10px;
+}
+
+.movie_data_card:hover{
+
+	background-color: #152374;
+	box-shadow: 0px 20px 20px 3px #1F1D36;
+	transition-duration: 0.3s;
 }
 
 .poster{
@@ -65,6 +75,13 @@ body{
 
 .input_search_button:hover{
 	background-color: #1F1D36;
+}
+
+.page_number{
+	margin-top: 80px;
+	color: #9E9D9F;
+	font-size: 20px;
+	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
 .footer{
@@ -140,4 +157,9 @@ body{
 	font-size: 40px;
 	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 	color: #DEDDFF;
+}
+
+.movie_data_card{
+	margin-right: 10px;
+	margin-left: 10px;
 }
