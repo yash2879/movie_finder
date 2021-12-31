@@ -1,17 +1,19 @@
 const API_URL = "http://www.omdbapi.com/?&apikey=e6328603&s=";
 const API_SEARCH_URL = "http://www.omdbapi.com/?apikey=e6328603&i=";
 
-var searchInputBox = document.getElementsByClassName("input_search_text")[0];
-var textBox = document.getElementById("text_view");
-var card_list_box = document.getElementsByClassName("card_list")[0];
 
 var countCard = 0;
 var pageNumber = 0;
 
 function searchMovies(){
+
+	var searchInputBox = document.getElementsByClassName("input_search_text")[0];
+	var card_list_box = document.getElementsByClassName("card_list")[0];
+
 	countCard = 0;
 	card_list_box.innerHTML=``;
-	var query = searchInputBox.value; //alert(query);
+	var query = searchInputBox.value; 
+	//alert(query);
 	if(query) {
 		getMovies(API_URL+query); 
 		//alert(API_URL+query); 
@@ -44,6 +46,11 @@ function showMovies(movies) {
 }
 
 function displayMovies(iMovie) {
+
+	var textBox = document.getElementById("text_view");
+	var card_list_box = document.getElementsByClassName("card_list")[0];
+
+
 	//alert(iMovie.Title);
 	const newCard = document.createElement("div");
 	newCard.classList.add("movie_data_card");
