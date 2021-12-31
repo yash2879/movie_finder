@@ -1,5 +1,5 @@
-const API_URL = "http://www.omdbapi.com/?&apikey=e6328603&s=";
-const API_SEARCH_URL = "http://www.omdbapi.com/?apikey=e6328603&i=";
+const API_URL = "https://www.omdbapi.com/?&apikey=e6328603&s=";
+const API_SEARCH_URL = "https://www.omdbapi.com/?apikey=e6328603&i=";
 
 
 var countCard = 0;
