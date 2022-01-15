@@ -8,18 +8,6 @@ body{
 	flex-direction: column;
 }
 
-.Main{
-	margin: 0px;
-	padding:0px;
-	height: 100vh;
-	width: 100vw;
-	overflow-x: hidden;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}
-
 .header_layout{
 	background-color: #1F1D36;
 	height: 140px;
