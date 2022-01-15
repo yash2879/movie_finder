@@ -97,6 +97,19 @@ body{
 	color: #DEDDFF;
 }
 
+.header_text{
+	align-content: center;
+	display: inline-block;
+	font-size: 40px;
+	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	color: #DEDDFF;
+}
+
+.movie_data_card{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
 @media screen and (min-width: 800px) { /*The following CSS runs only for displays with a width (in pixels) of more than 800px*/
     .input_search_text{
 		border: none;
@@ -157,17 +170,4 @@ body{
 	.poster img{
 		width: 40vw;
 	}
-}
-
-#header_text{
-	align-content: center;
-	display: inline-block;
-	font-size: 40px;
-	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-	color: #DEDDFF;
-}
-
-.movie_data_card{
-	margin-right: 10px;
-	margin-left: 10px;
 }
