@@ -8,6 +8,18 @@ body{
 	flex-direction: column;
 }
 
+.Main{
+	margin: 0px;
+	padding:0px;
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
 .header_layout{
 	background-color: #1F1D36;
 	height: 140px;
@@ -46,13 +58,12 @@ body{
 	max-width:60vw;
     word-wrap:break-word;
 	box-shadow: 0px 5px 10px 3px #1F1D36;
-	background-color: #3F3351;
+	background-color: #3f3351;
 	transition-duration: 0.8s;
 	border-radius: 10px;
 }
 
 .movie_data_card:hover{
-
 	background-color: #152374;
 	box-shadow: 0px 20px 20px 3px #1F1D36;
 	transition-duration: 0.3s;
@@ -74,13 +85,18 @@ body{
 }
 
 .input_search_button:hover{
-	background-color: #1F1D36;
+	background-color: #151424;
 }
 
 .page_number{
 	margin-top: 80px;
 	color: #9E9D9F;
 	font-size: 20px;
+	background-color: #000000d0;
+	padding: 20px;
+	color: rgba(255, 255, 255, 0.781);
+	font-weight: 600;
+	border-radius: 10px;
 	font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
@@ -111,7 +127,7 @@ body{
 		margin: none;
 		padding: none;
 		outline: none;
-		background-color: #3F3351;
+		background-color: #3c3963;
 		color: #DEDDFF;
 		transition-duration: 0.8s;
 		height: 40px;
@@ -148,6 +164,10 @@ body{
 		float: right;
 		font-size: 18px;
 		font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	}
+
+	.poster img{
+		width: 40vw;
 	}
 }
 

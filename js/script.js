@@ -2,15 +2,31 @@ const API_URL = "https://www.omdbapi.com/?&apikey=e6328603&s=";
 const API_SEARCH_URL = "https://www.omdbapi.com/?apikey=e6328603&i=";
 
 
+var searchInputBox = document.getElementsByClassName("input_search_text")[0];
+var card_list_box = document.getElementsByClassName("card_list")[0];
+var textBox = document.getElementById("text_view");
+
+
 var countCard = 0;
 var pageNumber = 0;
 
+document.getElementsByClassName("input_search_text")[0].addEventListener("keyup", function(event){
+	if(event.keyCode == 13)
+	{
+		document.getElementsByClassName("input_search_button")[0].click();
+	}
+});
+
+function clicked() {
+	textBox.innerHTML = "LOADING...";
+	searchMovies();
+}
+
 function searchMovies(){
 
-	var searchInputBox = document.getElementsByClassName("input_search_text")[0];
-	var card_list_box = document.getElementsByClassName("card_list")[0];
-
 	countCard = 0;
+	pageNumber = 0;
+
 	card_list_box.innerHTML=``;
 	var query = searchInputBox.value; 
 	//alert(query);
@@ -47,16 +63,13 @@ function showMovies(movies) {
 
 function displayMovies(iMovie) {
 
-	var textBox = document.getElementById("text_view");
-	var card_list_box = document.getElementsByClassName("card_list")[0];
-
 
 	//alert(iMovie.Title);
 	const newCard = document.createElement("div");
 	newCard.classList.add("movie_data_card");
 	newCard.innerHTML = `
 					<div class="poster">
-						<img style="border-radius: 10px;" src="${iMovie.Poster}">
+						<img style="border-radius: 10px;" src="${iMovie.Poster}" alt="${iMovie.Poster}">
 					</div>
 					<div class="movie_info">
 						<p>Title : ${iMovie.Title}</p>
@@ -78,7 +91,7 @@ function displayMovies(iMovie) {
 
 		const afterTM = document.createElement("p");
 		afterTM.classList.add("page_number");
-		afterTM.innerHTML = `__________________Page ${pageNumber}__________________`;
+		afterTM.innerHTML = `End of Page ${pageNumber}`;
 		card_list_box.appendChild(afterTM);
 	}
 	textBox.innerHTML=`<p>${countCard} movies found. Scroll down to see info.</p>`;
