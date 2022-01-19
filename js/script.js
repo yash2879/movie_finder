@@ -1,5 +1,5 @@
-const API_URL = "https://www.omdbapi.com/?&apikey=e6328603&s=";
-const API_SEARCH_URL = "https://www.omdbapi.com/?apikey=e6328603&i=";
+const API_URL = "https://www.omdbapi.com/?&apikey=f342313a&s=";
+const API_SEARCH_URL = "https://www.omdbapi.com/?apikey=f342313a&i=";
 
 
 var searchInputBox = document.getElementsByClassName("input_search_text")[0];
